@@ -1,10 +1,11 @@
+/* eslint-disable no-console */
 import React, { Component } from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 import Paper from 'material-ui/Paper';
 import AppBar from 'material-ui/AppBar';
-import LocationListContainer from './containers/LocationListContainer';
-import ForecastExtendedContainer from './containers/ForecastExtendedContainer';
+import LocationList from './components/LocationList';
+import ForecastExtended from './components/ForecastExtended';
 
 import './App.css';
 
@@ -20,7 +21,18 @@ const cities = [
 
 class App extends Component {
 
+  constructor() {
+    super();
+    this.state = { city: null };
+  }
+
+  handleSelectedLocation = city => {
+    this.setState({ city });
+    console.log(`handleSelectedLocation ${city}`);
+  }
+  
   render() {
+    const { city } = this.state;
     return (
 
       <MuiThemeProvider>
@@ -32,12 +44,17 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              <LocationListContainer cities={cities} ></LocationListContainer>
+              <LocationList cities={cities} 
+              onSelectedLocation={this.handleSelectedLocation} ></LocationList>
             </Col>
             <Col xs={12} md={6}>
               <Paper zDepth={4}>
                 <div className='detail'>
-                    <ForecastExtendedContainer></ForecastExtendedContainer>                       
+                  {
+                    city && 
+                    <ForecastExtended city={city}></ForecastExtended>
+                  }
+
                 </div>
               </Paper>
             </Col>
