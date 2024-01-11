@@ -22,6 +22,8 @@
   },
   "scripts": {
     "start": "react-scripts --openssl-legacy-provider start",
+    "start:watch": "nodemon start",
+    "dev": "npm run start:watch",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test --env=jsdom",
     "eject": "react-scripts --openssl-legacy-provider eject"
@@ -30,7 +32,8 @@
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-react": "^7.4.0",
-    "eslint-watch": "^7.0.0"
+    "eslint-watch": "^7.0.0",
+    "nodemon": "^3.0.2"
   },
   "browserslist": {
     "production": [
