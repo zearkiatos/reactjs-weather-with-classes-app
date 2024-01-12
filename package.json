@@ -26,7 +26,8 @@
     "dev": "npm run start:watch",
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test --env=jsdom",
-    "eject": "react-scripts --openssl-legacy-provider eject"
+    "eject": "react-scripts --openssl-legacy-provider eject",
+    "build:ci": "CI=false npm run build"
   },
   "devDependencies": {
     "eslint": "^6.6.0",

@@ -1,52 +1,49 @@
 /* eslint-disable no-console */
-import React, { Component } from 'react';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import { createStore } from 'redux';
-import { Grid, Row, Col } from 'react-flexbox-grid';
-import Paper from 'material-ui/Paper';
-import AppBar from 'material-ui/AppBar';
-import LocationList from './components/LocationList';
-import ForecastExtended from './components/ForecastExtended';
+import React, { Component } from "react";
+import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
+import { createStore } from "redux";
+import { Grid, Row, Col } from "react-flexbox-grid";
+import Paper from "material-ui/Paper";
+import AppBar from "material-ui/AppBar";
+import LocationList from "./components/LocationList";
+import ForecastExtended from "./components/ForecastExtended";
 
-import './App.css';
+import "./App.css";
 
 const cities = [
-  'Buenos Aires,ar',
-  'Washington,us',
-  'Bogota,co',
-  'Mexico,mx',
-  'Madrid,es'
+  "Buenos Aires,ar",
+  "Washington,us",
+  "Bogota,co",
+  "Mexico,mx",
+  "Madrid,es",
 ];
 
+const store = createStore(() => {},
+window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
-const store = createStore(() => {
-
-}, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
+const setCity = (value) => {
+  return {
+    type: "SET_CITY",
+    value,
+  };
+};
 
 class App extends Component {
-
   constructor() {
     super();
     this.state = { city: null };
   }
 
-  handleSelectedLocation = city => {
+  handleSelectedLocation = (city) => {
     this.setState({ city });
     console.log(`handleSelectedLocation ${city}`);
 
-    const action = {
-      type: "SET_CITY",
-      value: city
-    };
+    store.dispatch(setCity(city));
+  };
 
-    store.dispatch(action);
-  }
-  
   render() {
     const { city } = this.state;
     return (
-
       <MuiThemeProvider>
         <Grid>
           <Row>
@@ -56,17 +53,15 @@ class App extends Component {
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              <LocationList cities={cities} 
-              onSelectedLocation={this.handleSelectedLocation} ></LocationList>
+              <LocationList
+                cities={cities}
+                onSelectedLocation={this.handleSelectedLocation}
+              ></LocationList>
             </Col>
             <Col xs={12} md={6}>
               <Paper zDepth={4}>
-                <div className='detail'>
-                  {
-                    city && 
-                    <ForecastExtended city={city}></ForecastExtended>
-                  }
-
+                <div className="detail">
+                  {city && <ForecastExtended city={city}></ForecastExtended>}
                 </div>
               </Paper>
             </Col>
