@@ -20,7 +20,7 @@ jobs:
     - name: Generate build number
       run: echo "The build number $GITHUB_RUN_NUMBER 🏗"
     - name: Install dependencies
-      run: npm install
+      run: npm install --legacy-peer-deps
     - name: Public URL
       run: export PUBLIC_URL=https://zearkiatos.github.io/reactjs-weather-with-classes-app/
     - name: Test 🧪

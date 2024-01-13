@@ -7,6 +7,7 @@ import Paper from "material-ui/Paper";
 import AppBar from "material-ui/AppBar";
 import LocationList from "./components/LocationList";
 import ForecastExtended from "./components/ForecastExtended";
+import { setCity } from "./actions";
 
 import "./App.css";
 
@@ -20,13 +21,6 @@ const cities = [
 
 const store = createStore(() => {},
 window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
-const setCity = (value) => {
-  return {
-    type: "SET_CITY",
-    value,
-  };
-};
 
 class App extends Component {
   constructor() {
