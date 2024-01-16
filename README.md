@@ -4,6 +4,7 @@ https://github.com/react-icons/react-icons
 This is a reactjs ⚛️ project building with classes and redux. This is an application to get information about the weather ☁️ in different countries around the world 🌎
 
 ![Github](https://github.com/zearkiatos/reactjs-weather-with-classes-app/actions/workflows/action.yml/badge.svg)
+![GitlabCI](https://gitlab.com/caprilespe/reactjs-weather-with-classes-app/badges/develop/pipeline.svg)
 
 # Made with
 [![ReactJS](https://img.shields.io/badge/react-61dafb?style=for-the-badge&logo=react&logoColor=white&labelColor=000000)]()
