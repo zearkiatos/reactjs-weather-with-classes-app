@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-01-17T00:33:54Z"
+  labels:
+    app: reactjs-weather-with-classes-app
+  name: reactjs-weather-with-classes-app
+  namespace: default
+  resourceVersion: "2766"
+  uid: 7b60389b-6bd9-49eb-9e8c-46a7c88003ce
+spec:
+  clusterIP: 10.98.87.181
+  clusterIPs:
+  - 10.98.87.181
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: reactjs-weather-with-classes-app
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}
