@@ -1,9 +1,11 @@
 {
-  "name": "weatherapp",
+  "name": "reactjs-weather-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "convert-units": "^2.3.1",
+    "firebase": "^10.7.1",
     "loadash": "^1.0.0",
     "lodash.topairs": "^4.3.0",
     "material-ui": "^0.19.2",
@@ -27,9 +29,12 @@
     "build": "react-scripts --openssl-legacy-provider build",
     "test": "react-scripts --openssl-legacy-provider test --env=jsdom",
     "eject": "react-scripts --openssl-legacy-provider eject",
-    "build:ci": "CI=false npm run build"
+    "build:ci": "CI=false npm run build",
+    "firebase:deploy": "firebase deploy",
+    "prefirebase:deploy": "npm run build"
   },
   "devDependencies": {
+    "dotenv": "^16.3.1",
     "eslint": "^6.6.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-react": "^7.4.0",

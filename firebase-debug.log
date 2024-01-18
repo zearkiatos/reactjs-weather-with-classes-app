@@ -1,0 +1,148 @@
+[debug] [2024-01-18T23:43:44.014Z] ----------------------------------------------------------------------
+[debug] [2024-01-18T23:43:44.015Z] Command:       /Users/pedrocapriles/.nvm/versions/node/v18.16.0/bin/node /Users/pedrocapriles/.nvm/versions/node/v18.16.1/bin/firebase deploy
+[debug] [2024-01-18T23:43:44.016Z] CLI Version:   12.4.6
+[debug] [2024-01-18T23:43:44.016Z] Platform:      darwin
+[debug] [2024-01-18T23:43:44.016Z] Node Version:  v18.16.0
+[debug] [2024-01-18T23:43:44.017Z] Time:          Thu Jan 18 2024 20:43:44 GMT-0300 (Chile Summer Time)
+[debug] [2024-01-18T23:43:44.017Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-18T23:43:44.056Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-18T23:43:44.057Z] > authorizing via signed-in user (caprilespe@gmail.com)
+[debug] [2024-01-18T23:43:44.057Z] [iam] checking project reactjs-weather-app for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-18T23:43:44.058Z] > refreshing access token with scopes: []
+[debug] [2024-01-18T23:43:44.058Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-18T23:43:44.058Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:43:44.134Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-18T23:43:44.134Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:43:44.134Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions [none]
+[debug] [2024-01-18T23:43:44.134Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions x-goog-quota-user=projects/reactjs-weather-app
+[debug] [2024-01-18T23:43:44.135Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-18T23:43:45.021Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions 401
+[debug] [2024-01-18T23:43:45.022Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2024-01-18T23:43:45.022Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-18T23:43:45.023Z] > refreshing access token with scopes: []
+[debug] [2024-01-18T23:43:45.023Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-18T23:43:45.023Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:43:45.088Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-18T23:43:45.088Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:43:45.089Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app [none]
+[debug] [2024-01-18T23:43:45.175Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app 401
+[debug] [2024-01-18T23:43:45.175Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-01-18T23:43:45.175Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-18T23:43:45.250Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/Users/pedrocapriles/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/pedrocapriles/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project reactjs-weather-app. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-01-18T23:44:55.072Z] ----------------------------------------------------------------------
+[debug] [2024-01-18T23:44:55.073Z] Command:       /Users/pedrocapriles/.nvm/versions/node/v18.16.0/bin/node /Users/pedrocapriles/.nvm/versions/node/v18.16.1/bin/firebase deploy
+[debug] [2024-01-18T23:44:55.073Z] CLI Version:   12.4.6
+[debug] [2024-01-18T23:44:55.073Z] Platform:      darwin
+[debug] [2024-01-18T23:44:55.073Z] Node Version:  v18.16.0
+[debug] [2024-01-18T23:44:55.076Z] Time:          Thu Jan 18 2024 20:44:55 GMT-0300 (Chile Summer Time)
+[debug] [2024-01-18T23:44:55.076Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-18T23:44:55.115Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-18T23:44:55.115Z] > authorizing via signed-in user (caprilespe@gmail.com)
+[debug] [2024-01-18T23:44:55.115Z] [iam] checking project reactjs-weather-app for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-18T23:44:55.116Z] > refreshing access token with scopes: []
+[debug] [2024-01-18T23:44:55.116Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-18T23:44:55.116Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:44:55.239Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-18T23:44:55.239Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:44:55.239Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions [none]
+[debug] [2024-01-18T23:44:55.239Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions x-goog-quota-user=projects/reactjs-weather-app
+[debug] [2024-01-18T23:44:55.239Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-18T23:44:56.104Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions 401
+[debug] [2024-01-18T23:44:56.104Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2024-01-18T23:44:56.105Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-18T23:44:56.105Z] > refreshing access token with scopes: []
+[debug] [2024-01-18T23:44:56.105Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-18T23:44:56.105Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:44:56.151Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-18T23:44:56.151Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:44:56.151Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app [none]
+[debug] [2024-01-18T23:44:56.270Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app 401
+[debug] [2024-01-18T23:44:56.271Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-01-18T23:44:56.271Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-18T23:44:56.302Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/Users/pedrocapriles/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/pedrocapriles/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project reactjs-weather-app. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-01-18T23:45:17.753Z] ----------------------------------------------------------------------
+[debug] [2024-01-18T23:45:17.754Z] Command:       /Users/pedrocapriles/.nvm/versions/node/v18.16.0/bin/node /Users/pedrocapriles/.nvm/versions/node/v18.16.1/bin/firebase deploy
+[debug] [2024-01-18T23:45:17.754Z] CLI Version:   12.4.6
+[debug] [2024-01-18T23:45:17.754Z] Platform:      darwin
+[debug] [2024-01-18T23:45:17.754Z] Node Version:  v18.16.0
+[debug] [2024-01-18T23:45:17.755Z] Time:          Thu Jan 18 2024 20:45:17 GMT-0300 (Chile Summer Time)
+[debug] [2024-01-18T23:45:17.755Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-18T23:45:17.794Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-18T23:45:17.794Z] > authorizing via signed-in user (caprilespe@gmail.com)
+[debug] [2024-01-18T23:45:17.794Z] [iam] checking project reactjs-weather-app for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-18T23:45:17.795Z] > refreshing access token with scopes: []
+[debug] [2024-01-18T23:45:17.799Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-18T23:45:17.799Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:45:17.890Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-18T23:45:17.890Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:45:17.890Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions [none]
+[debug] [2024-01-18T23:45:17.890Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions x-goog-quota-user=projects/reactjs-weather-app
+[debug] [2024-01-18T23:45:17.891Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-18T23:45:18.730Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions 401
+[debug] [2024-01-18T23:45:18.731Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2024-01-18T23:45:18.731Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-18T23:45:18.731Z] > refreshing access token with scopes: []
+[debug] [2024-01-18T23:45:18.732Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-18T23:45:18.732Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:45:18.831Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-18T23:45:18.831Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:45:18.832Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app [none]
+[debug] [2024-01-18T23:45:18.867Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app 401
+[debug] [2024-01-18T23:45:18.867Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-01-18T23:45:18.867Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-18T23:45:18.932Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/Users/pedrocapriles/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/pedrocapriles/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project reactjs-weather-app. Please make sure the project exists and your account has permission to access it.
+[debug] [2024-01-18T23:46:34.519Z] ----------------------------------------------------------------------
+[debug] [2024-01-18T23:46:34.520Z] Command:       /Users/pedrocapriles/.nvm/versions/node/v18.16.0/bin/node /Users/pedrocapriles/.nvm/versions/node/v18.16.1/bin/firebase deploy
+[debug] [2024-01-18T23:46:34.521Z] CLI Version:   12.4.6
+[debug] [2024-01-18T23:46:34.521Z] Platform:      darwin
+[debug] [2024-01-18T23:46:34.521Z] Node Version:  v18.16.0
+[debug] [2024-01-18T23:46:34.524Z] Time:          Thu Jan 18 2024 20:46:34 GMT-0300 (Chile Summer Time)
+[debug] [2024-01-18T23:46:34.524Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-01-18T23:46:34.563Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-01-18T23:46:34.563Z] > authorizing via signed-in user (caprilespe@gmail.com)
+[debug] [2024-01-18T23:46:34.563Z] [iam] checking project reactjs-weather-app for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-01-18T23:46:34.564Z] > refreshing access token with scopes: []
+[debug] [2024-01-18T23:46:34.568Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-18T23:46:34.568Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:46:34.655Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-18T23:46:34.655Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:46:34.655Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions [none]
+[debug] [2024-01-18T23:46:34.655Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions x-goog-quota-user=projects/reactjs-weather-app
+[debug] [2024-01-18T23:46:34.655Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-01-18T23:46:35.484Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions 401
+[debug] [2024-01-18T23:46:35.484Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/reactjs-weather-app:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2024-01-18T23:46:35.485Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-18T23:46:35.485Z] > refreshing access token with scopes: []
+[debug] [2024-01-18T23:46:35.485Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-01-18T23:46:35.485Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:46:35.537Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2024-01-18T23:46:35.537Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-01-18T23:46:35.538Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app [none]
+[debug] [2024-01-18T23:46:35.611Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app 401
+[debug] [2024-01-18T23:46:35.612Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/reactjs-weather-app {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2024-01-18T23:46:35.612Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2024-01-18T23:46:35.644Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (/Users/pedrocapriles/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/pedrocapriles/.nvm/versions/node/v18.16.1/lib/node_modules/firebase-tools/lib/apiv2.js:285:77)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+[error] 
+[error] Error: Failed to get Firebase project reactjs-weather-app. Please make sure the project exists and your account has permission to access it.

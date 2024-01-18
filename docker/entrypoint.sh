@@ -1,4 +1,4 @@
-if [ $(echo "$ENVIRONMENT")=="develop" ]
+if [ $(echo "$REACT_APP_ENVIRONMENT")=="develop" ]
 then
     npm run dev
 else
