@@ -5,6 +5,7 @@ import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import { Grid, Row, Col } from "react-flexbox-grid";
 import Paper from "material-ui/Paper";
 import AppBar from "material-ui/AppBar";
+import PropTypes from "prop-types";
 import LocationList from "./components/LocationList";
 import ForecastExtended from "./components/ForecastExtended";
 import { setCity } from "./actions";
@@ -63,10 +64,12 @@ class App extends Component {
   }
 }
 
+App.prototype = {
+  setCity: PropTypes.func.isRequired,
+};
+
 const mapDispatchToPropsActions = (dispatch) => ({
   setCity: (value) => dispatch(setCity(value)),
 });
 
-const AppConnected = connect(null, mapDispatchToPropsActions)(App);
-
-export default AppConnected;
+export default connect(null, mapDispatchToPropsActions)(App);
