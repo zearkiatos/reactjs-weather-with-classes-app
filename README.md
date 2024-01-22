@@ -17,6 +17,10 @@ Firebase 🔥: [https://reactjs-weather-with-classes-app.web.app/](https://react
 
 Vercel: [https://reactjs-weather-with-classes-app.vercel.app/](https://reactjs-weather-with-classes-app.vercel.app/)
 
+Netlify: [https://reactjs-weather-with-classes-app.netlify.app/](https://reactjs-weather-with-classes-app.netlify.app/)
+
+
+
 # Made with
 [![ReactJS](https://img.shields.io/badge/react-61dafb?style=for-the-badge&logo=react&logoColor=white&labelColor=000000)]()
 [![JavaScript](https://img.shields.io/badge/javascript-ead547?style=for-the-badge&logo=javascript&logoColor=white&labelColor=000000)]()
